@@ -1,0 +1,118 @@
+parameter,coef
+"Average earnings per worker growth, 2001-2016",0.00023018413419855047
+Capital outlays per pupil,0.0012307436140515235
+Civilian population aged 25 and up,0.00043905969533232817
+Farmers' markets per capita,0.0
+Flag = 1 if state has expanded Medicaid,0.0006769173496160705
+Grocery stores per capita,0.0008552931749677232
+Interval measure of number of organizations at which one volunteers  ,0.000586302141780319
+Interval measure of volunteer hours  ,2.994000613861962e-06
+Itemized contributions as share of total adjusted gross income,-7.764008737912283e-05
+Long-term debt issued during FY per pupil,-0.0
+"Long-term debt outstanding at the end of FY per pupil, thousands of current dollars",0.0
+Natural amenity scale,0.0
+Net migration rate,0.0
+"Non-rent seeking organizations per 10,000 population",0.0011078532012869025
+"Payments sent to charter schools per pupil, thousands of current dollars",-0.00038431797183108594
+"Payments sent to private schools per pupil, thousands of current dollars",0.00047033789311440804
+Percent of adults that have diabetes,-0.0018708023274657455
+Percent of civilian population aged 25-34 that is uninsured,-0.0023939636853033707
+Percent of current spending spent on support services,-0.0
+Percent of population that didn't work over the past year,-0.008434724197069766
+Percent of population that works part-time (less than 35 hours a week),-0.00014332077449494778
+Percent of returns with itemized deductions,0.00587469147213393
+Percent of returns with professional or business income,8.829918231539106e-05
+Percent of returns with salaries and wages,-0.0032406472632091855
+Percent of revenue from federal sources,-0.000927974141351821
+Percent of total elementary-secondary expenditures for other elementary-secondary programs,-0.00019246789503647743
+Percent of total revenue from state sources,-0.000968139764204121
+Percent of working population that carpooled to work,-0.0017358350353474787
+Percent of working-age population working 1-13 weeks per year,-0.000438819298027725
+Percent of working-age population working 14-39 weeks per year,-0.0
+Percent of working-age population working 40-47 weeks per year,0.00013554219699801252
+Population density,0.0005695370247415706
+"Population growth, 2010-2016",0.0021381463377661567
+Population that has low access to grocery stores rate,-0.0006407032885963621
+"Property crime events per 1,000 population",-0.0008027201840535722
+Rate Working Outside County of Residence  ,-0.0012308401843291658
+Ratio of emp. in local industries to traded industries,-0.00029042972643135586
+Ratio of interest on school system debt to total elementary-secondary expenditures,-0.0
+Ratio of non-elementary-secondary expenditures to total elementary-secondary expenditures,0.00046644437852057355
+"Rent-seeking organizations per 10,000 people",0.0002790923457623915
+Residential stability,-0.0007958603949276102
+Rural-urban continuum code (1-9),-0.0014163655442769527
+"Share of emp. in Arts occupations, 2007-11 avg",0.0019212937234275428
+Share of emp. in all local industries,0.0008714104370395284
+Share of emp. in the 2nd-largest traded industry  ,0.0004849668000840055
+Share of emp. in the 4th-largest traded industry  ,-0.0
+Share of emp. in the 5th-largest traded industry  ,-0.0
+Share of emp. in the Arts & Entertainment occupation SC,0.0011047248984869303
+Share of emp. in the Business & Other White Collar occupation SC,-0.0
+Share of emp. in the Business Services & Support industry supercluster (SC),0.0
+Share of emp. in the College occupation SC,-0.0006536827655048295
+Share of emp. in the High IP Manufacturing industry SC,-0.000576433211097686
+"Share of emp. in the Manufacturing, Technology & Engineering occupation SC",-3.852415816289046e-05
+Share of emp. in the Tech & Knowledge Services industry SC,4.9460691917145186e-05
+Share of emp. in the largest local industry,0.0008574116331957137
+Share of emp. in the largest traded industry  ,-0.0005508803741785327
+Share of emp. in top 2 local industries,0.0013526862019742662
+Share of emp. in top 3 industries,0.0009107116906321352
+Standardized score of January mean sunlight,0.0007020566010754036
+Standardized score of January mean temperature,-0.0002305515225456617
+Standardized score of July mean humidity,-0.0006345855400907759
+Standardized score of July mean temperature,-0.0
+Standardized score of topographical features,0.00022389731187671578
+Suicide rate,-0.0
+Total civilian population aged 18-64 rate,0.0034548581732935183
+Total civilian population aged 25-34 rate,-6.591074020085788e-05
+"Total civilian population, 2016 rate",-0.0
+Total fall 2015 public school enrollment rate,-0.0006372212951376066
+"Total school revenue from local sources, thousands of current dollars rate",0.0006962670903107871
+"Total school revenue from state sources, thousands of current dollars rate",0.0
+Years of potential life lost to premature death (age-adjusted) rate,-0.0004647327754586911
+"emp. growth, 2001-2016",0.0
+emp. in social assistance industries (NAICS 624) rate,-0.0
+Agreeableness,0.00019249419230172817
+Belief In Science,0.0007719793847253754
+Collectivism,0.0
+Conflict Awareness,0.00014620073041466156
+Conscientiousness,-0.0005572741502519417
+Empathy,1.8437182090144852e-05
+Employment Rate,0.0019066831121593397
+Entrepreneurship,0.0
+Extraversion,0.0
+Gender Equality,-0.00018392143167128677
+Hopefulness,-0.0
+Income Mobility,6.597520705659251e-05
+Neuroticism,-4.805052653528385e-05
+Openness,0.0006124004455799527
+Religiosity,-0.000931065156219867
+Risk Taking,0.0002946736434553364
+Selflessness,0.0
+Tolerance,-0.0
+Work Ethic,-0.0
+Murder rate per 100000,-0.0002051757521776294
+Rape rate per 100000,5.832180002058704e-05
+Robbery rate per 100000,-0.0
+Aggrevated Assault rate per 100000,0.0
+Burglery rate per 100000,-0.0
+Motor Vehicle Theft rate per 100000,-0.0010426959118508944
+Arson rate per 100000,6.939052024742839e-05
+% Low birthweight,-0.001515142790277444
+% Smokers,-0.0038936298341690667
+% Physically Inactive,-0.001763982997560733
+% With Access to Exercise Opportunities,0.0012227458409941102
+% Driving Deaths with Alcohol Involvement,0.0002904851308217682
+Chlamydia rate per 100000,-0.0
+Primary Care Physicians Ratio,-0.00028473552579418775
+Dentist Ratio,-0.0007722179146185803
+Mental Health Provider Ratio,-0.0
+% With Annual Mammogram,0.00045709906342460133
+% Vaccinated (Influenza),0.0007766476195897728
+Income Ratio (80th% : 20th%),0.0009448716074762072
+Injury Death Rate,-0.0014696174283131192
+Average Daily Air Polution above 2.5 ppm,-0.0
+Presence of Water Violation,0.0002759479893839657
+% Severe Housing Problems,-0.0005157568912694441
+% Drive Alone to Work,-0.0004271179960316973
+% Long Commute - Drives Alone,0.0
