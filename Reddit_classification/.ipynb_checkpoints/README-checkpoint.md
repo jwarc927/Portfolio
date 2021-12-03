@@ -1,35 +1,33 @@
+## Subreddit NLP Classification 
+
 ### Problem Statement
 
-The goals of this project are twofold:
-
-1) We try to use a linear regression model to provide some meaningful, actionable advice for home owners in Ames, Iowa to use in planning their future home rennovation projects.
-2) Simultaneously, we try to fit a model which will provide the most predictive power in estimating the price of homes in our test set.
-
-The first goal requires model interpretability.  The average home owner is not going to understand feature coefficients and regularization parameters.  So, we attempt to distil the results of our model into actionable things that a home owner could do.  For example we want to be able to say something along the lines of: "If you want to remodel your home, we recommend that you focus on X and spend approximately Y dollars on the project."
-
-The second goal does not require interpretability and feature engineering, dummy variables, regularization will be used with the sole purpose of minimizng the Root Mean Square Error (RMSE) of the final predictions on the test set.  As we will see an, essentially uninterpretable feature will be constructed which nonetheless provides a great deal of predictive power.
-
+The goal of this project is to determine if we can train a classifiation natural language processing algorithm to classify news headlines by inentionally satirical articles written by The Onion versus real articles that the Reddit community has identified as seeming satirical.  The goal will be maximize accuracy for the training set because there is no clear preference toward minimizing false negatives versus false positives. 
 
 ### Data Used
 
-The dataset we are using is obtained from the Kaggle website and presented as a competition to use the data to compute predictions that will minimize the RMSE.  This dataset contains 82 different features including two arbitary ID columns and 22 nominal, 23 ordinal, 13 discrete, and 20 continuous variables whcih may contain useful information for our model.  
+The dataset we are using has been extracted from Reddit using the Pushshift API.  In particular, the subreddit [theOnion](https://www.reddit.com/r/TheOnion/) and [nottheonion](https://www.reddit.com/r/nottheonion/) were used.  The Onion subreddit has approximately 20,000 posts and Not The Onion has nearly 500,000 posts.  From this set of possible posts, we extract approximately 15,000 entries starting from the most recent from each subreddit.  Most of these posts do not have body text, so the data only includes the title, which corresponds to the headlines of the original article.  T
 
-The original data is from the Ames, Iowa Assessor’s Office and the data dictionary can be consulted here: [Ames Data Dictionary](http://jse.amstat.org/v19n3/decock/DataDocumentation.txt)
+|Feature|Type|Dataset|Description|
+|---|---|---|---|
+|**title**|*string*|both|The headline of an article| 
+|**onion**|*boolean*|both|1 if the headline is from the Onion, 0 if it is not|
+
+### Summary Analysis
+
+Three different approaches were attempted.  The first was to perform a sentiment analysis on the headlines to see if there may be trend in Onion article to have more sentiment in total (either positive or negative).  This approach did not prove useful because the sentiment for both types of headline were distributed in a very similar way.  The second approach was to use word vectorization to determine if there was a pattern of non sequiturs in the Onion headlines.  The thought process here is that in this method words are vectorized in 50D space based on their proximity to other wrods in a corpus of text.  If there were a lot of words that were in contextually unusual places, this could be an indication of satire.  Unfortuneatly, this analysis was too computationally intensive for the computer resources availalbe and was tabled for possible reinvestigation at a later date.
+
+The third method consisted of training three different models (Random Forest, Support Vector Machine, and Logistic Regression) on a Term Frequency-Inverse Document Frequency (TF-IDF) Vectorizer transformed version of all of the headlines.  Finally, an Ensemble model consisting of these three base models is fit.
 
 ### Conclusions
 
-To answer the first aspect of our problem statement we can consult the following table:
+Selected metrics from the models generated above are presented below:
 
-|Feature|Coefficient|per Unit|Description|
-|---|---|---|---|
-|**bsmtfin_sf_1**|8935|per 461 sf|Increase price of home by 8,935 for every 461 sf of finished basement area| 
-|**bsmt_qual**|3006|per 0.69 increment|Increase price of home by 3,006 for every 0.69 steps in appraiser's opinion of basement quality| 
-|**kitchen_qual**|3982|per 0.67 increment|Increase price of home by 3,982 for every 0.67 steps in appraiser's opinion of kitchen quality| 
-|**year_remod/add**|3661|per 21 years|Decrease price of home by 3,661 for every 21 years since last remodel| 
-|**screen_porch**|3184|per 57 sf|Increase price of home by 3,184 for every 57 sf of screened in porch area| 
-|**fireplaces**|2136|per 0.64 fireplaces|Increase price of home by 2,136 for every 0.64 fireplaces| 
-|**exter_qual**|3545|per 0.59 increments|Increase price of home by 3,545 for every 0.59 steps in appraiser's opinion of exterior quality| 
+|Model|Accuracy|Recall|Precision|F1 Score|
+|---|---|---|---|---|
+|**SVM**|70.6%|56.4%|78.6%|65.7%| 
+|**Logistic Reg**|65.8%|56.2%|74.5%|64.1%| 
+|**Random Forest**|64.6%|38.9%|79.9%|52.2%| 
+|**Ensemble**|69.2%|53.7%|77.7%|63.5%| 
 
-This leads us to the recommendation that for a home owner to optimize the current value of their home they should finish as much of their basement as possible at a quality that exceeds the typical.  They should improove their kitchen as much as is possible within their budget.  They should add a screened porch as large as they have room and they should add a fireplace.  On top of all of this, the exterior quality of their home and grounds should be improved as much as possible.  
-
-For the second aspect of the problem statement: we have generated a model which an RMSE of 19,777 on the training set.  This model incorporates elements that are not addressed in the first portion of the problem, but which, nonetheless, increase the predictive power of the model.
+Based on these results, the recommended model is the SVM because it is better than every other model in every metric except for the precision of the Random Forest model.  However, the Random Forest model's poor recall and low accuracy disqualify it as the best.
